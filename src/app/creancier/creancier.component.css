@@ -1,0 +1,360 @@
+:host {
+    display: block;
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #4CAF50;
+    --sidebar-color: #FFF;
+    --text-color: #707070;
+    --section-title-color: #999;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #E4E9F7;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 1.2em; /* Larger font */
+}
+
+/* Container styles */
+.container {
+    display: flex;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    padding: 25px;
+    background: #fff;
+    border-right: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+    padding: 25px 0;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.profile .email {
+    font-size: 16px;
+    color: #666;
+}
+
+.menu-section {
+    margin-top: 30px;
+}
+
+.section-title {
+    color: #999;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.sidebar ul li {
+    margin: 5px 0;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #666;
+    padding: 14px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.sidebar ul li a:hover i {
+    color: #fff;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a.router-link-active,
+.sidebar ul li a:active {
+    background: none !important;
+    color: #666 !important;
+}
+
+.sidebar ul li a.active i,
+.sidebar ul li a.router-link-active i,
+.sidebar ul li a:active i {
+    color: #666 !important;
+}
+
+.sidebar ul li a i {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #666;
+}
+
+.content {
+    margin-left: 350px;
+    padding: 40px;
+}
+
+.test{
+    margin-top: 70px;
+}
+
+/* Main content */
+.payment-container {
+    margin-left: 400px;
+    padding: 40px; /* Augmenté */
+    width: 100%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 36px; /* Taille de police augmentée */
+    margin-bottom: 30px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 15px; /* Augmenté l'espace entre les onglets */
+    margin-bottom: 30px;
+}
+
+.tab {
+    padding: 15px 30px; /* Agrandi */
+    font-size: 20px; /* Police plus grande */
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #31b23d;
+    color: white;
+    font-size: 22px; /* Police plus grande */
+}
+
+/* Filter styles */
+.filter-container {
+    margin-bottom: 30px;
+}
+
+.filter-container select {
+    width: 100%;
+    padding: 15px; /* Agrandi */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px; /* Taille de police augmentée */
+}
+
+/* Creditor card styles */
+.creditor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Taille minimale des cartes augmentée */
+    gap: 30px; /* Augmenté l'espace entre les cartes */
+}
+
+.creditor-card {
+    background-color: white;
+    padding: 25px; /* Agrandi */
+    border: 1px solid #ddd;
+    border-radius: 15px; /* Bords arrondis plus visibles */
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Augmenté l'ombre pour un effet plus visible */
+}
+
+.creditor-card img {
+    max-width: 150px; /* Agrandi */
+    margin-bottom: 20px;
+}
+
+.creditor-card h3 {
+    font-size: 24px; /* Taille de police augmentée */
+    margin: 15px 0;
+    color: #333;
+}
+
+.creditor-card p {
+    font-size: 20px; /* Taille de police augmentée */
+    color: #666;
+}
+
+/* Buttons */
+button {
+    padding: 15px 30px; /* Taille des boutons agrandie */
+    font-size: 20px; /* Police augmentée */
+    background-color: #31b23d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Ajout d'une ombre pour un effet de surélévation */
+}
+
+button:hover {
+    background-color: #27b300;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Effet hover plus visible */
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Table styles */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.table thead {
+    background-color: #f4f4f4;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.table tbody tr {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Action Button */
+.table .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.table .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+
+    .table tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .table td {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        position: relative;
+    }
+
+    .table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .table input[type="checkbox"] {
+        transform: scale(1.0);
+    }
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
